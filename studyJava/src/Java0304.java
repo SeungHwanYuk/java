@@ -1,4 +1,4 @@
-public class java0301 {
+public class Java0304 {
     public static void main(String[] args) {
 /*        for (초기식; 조건식; 증감식) {
             System.out.println(i);
@@ -10,7 +10,8 @@ public class java0301 {
            // 상황에 따라 break 키워드 사용 가능 (조건식을 정수로 판단할 수 없을 때)
         }
 */
-        /*for문을 풀어 써본다면?
+        /*
+        for문을 풀어 써본다면?
         for ( ; ; ) {
             if (a <5){
                 System.out.print(a + " ");
@@ -18,7 +19,9 @@ public class java0301 {
             } else {
                 break;
             }
-        }*/
+        }
+        */
+
         int a; // for문의 반복횟수를 지정하는 변수를 외부에서 선언
         for (a = 0; a < 3; a++) {
             System.out.print(a + " ");
