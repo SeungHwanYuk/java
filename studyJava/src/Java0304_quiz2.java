@@ -1,4 +1,4 @@
-public class Java0304_Quiz2 {
+public class Java0304_quiz2 {
     public static void main(String[] args) {
         //다음 이중 for문을 실행했을 때 A는 몇 회 출력 되는지 쓰시오
         for (int i = 0 ; i< 5 ; i++) {

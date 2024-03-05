@@ -1,4 +1,4 @@
-public class Java_For_Test {
+public class Java0229_for_test {
     public static void main(String[] args) {
         for (int i = 0; ; i++) {
             if (i==1) {

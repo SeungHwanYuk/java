@@ -1,4 +1,4 @@
-public class Java_Array_Test0304 {
+public class Java0304_array_test {
     public static void main(String[] args) {
         // 배열의 기본 선언법
         int[] intArray = {1, 2, 3, 4, 5}; // 값이 있으므로 이미 힙으로 할당됨
@@ -20,8 +20,7 @@ public class Java_Array_Test0304 {
             intArray3[i] = i + 1;
             System.out.print(intArray3[i] + " ");
         }
-        System.out.println();
-        {
+        System.out.println() ;{
 
             int[] intArray4 = new int[]{1, 2, 3, 4, 5};
             {
