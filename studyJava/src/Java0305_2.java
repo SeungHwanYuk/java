@@ -62,7 +62,7 @@ public class Java0305_2 {
         boolean[] booleanList = new boolean[3];        // true, false 의 초깃값은 false
         char[] charList = new char[3];                 // 알수없는 문자
         String[] strList = new String[3];              // null = 숫자와 문자를 구분하지 않는 경우
-        System.out.println(Arrays.toString(intList));  // Arrays.toString = 변수의 초깃값을 알려주는 메소드
+        System.out.println(Arrays.toString(intList));  // Arrays.toString = 배열의 모든 원소를 한번에 출력하는 메소드
         System.out.println(Arrays.toString(floatList));
         System.out.println(Arrays.toString(booleanList));
         System.out.println(Arrays.toString(charList));
