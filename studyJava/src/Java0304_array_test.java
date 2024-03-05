@@ -20,24 +20,20 @@ public class Java0304_array_test {
             intArray3[i] = i + 1;
             System.out.print(intArray3[i] + " ");
         }
-        System.out.println() ;{
+        System.out.println() ;
 
-            int[] intArray4 = new int[]{1, 2, 3, 4, 5};
-            {
+            int[] intArray4 = new int[]{1, 2, 3, 4, 5};{
                 System.out.println(intArray4[0]);
-            }
+
             System.out.println();
-            {
                 //배열의 복사 (=참조 복사)
                 String[] str1 = {"black", "red", "blue"};
                 String[] str2 = str1;
                 System.out.println("1 " + str2[0]);
                 str2[0] = "white";
                 System.out.println("2 " + str2[0]);
-                System.out.println("3 " + str1[0]);
-            }
+                System.out.println("3 " + str1[0]);}
             System.out.println();
-            {
                 //기본자료형의 복사 (=값 복사)
                 int a = 3;
                 int b = a;
@@ -45,15 +41,13 @@ public class Java0304_array_test {
                 b = 6;
                 System.out.println("2 " + b);
                 System.out.println("3 " + a);
-            }
+
             System.out.println();
-            {
                 String[] studentList = {"철수", "민수", "명수", "영희", "춘자", "야미", "길동", "코코", "준호", "동길"};
                 for (int i = 0; i < studentList.length; i++) {
                     if (studentList[i] == "명수")
                         System.out.println(i);
-                }
+
             }
         }
     }
-}
