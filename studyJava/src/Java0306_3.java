@@ -65,36 +65,67 @@ public class Java0306_3 {
 
         // Q4 사용자로부터 0~6까지 숫자를 입력받아 아래  배열에해당하는 요일을 출력
 
-     /*   char[] week = {'월', '화', '수', '목', '금', '토', '일'};
+       /* char[] week = {'월', '화', '수', '목', '금', '토', '일'};
         Scanner scan = new Scanner(System.in);
         System.out.print("0~6까지 숫자를 입력해 주세요 :");
         int num = scan.nextInt();
-        for (int i = 0 ; i <= week.length ; i++ ) {;
-            if (num >= 0 && num <= 6 ) {
-                System.out.print(123123);
+        for (int i = 0; i <= week.length; i++) {
+            if (num >= 0 && num <= 6) {
+                System.out.print(week[num]);
+                break;
             } else {
                 System.out.print(33);
             }
+        }*/
 
-*/
 
         // Q5 사용자로부터 이름을 입력받아 아래 회원 배열에 있는 이름이면
         // "~~~님 환영합니다"를 출력하고
         // 없으면 "회원가입해주세요"를 출력
 
         String[] members = {"Steve", "Tom", "Michael", "Laura", "Jessica", "Annie"};
-            Scanner scan2 = new Scanner(System.in);
+        Scanner scan2 = new Scanner(System.in);
         System.out.print("사용자의 이름을 입력하세요 :");
         String inputStr = scan2.nextLine();
 
-        for (int i = 0 ; i <= members.length ; i++ ) {
-            if ()) {
-                System.out.print
+        // case 1
+ /*       boolean found = false;
+        for (int j = 0; j < members.length; j++) {
+            if (members[j].equalsIgnoreCase(inputStr)) {
+                System.out.print(members[j] + "님 환영합니다");
+                found = true;
                 break;
-            } else {
-                System.out.print("회원가입해주세요");
+            }
+            if (!found) {
+                System.out.print("회원가입 해주세요");
+            }*/
+
+            // case 2
+         /*  for ( int k = 0 ; k < members.length ; k++) {
+                if ( members[k].equalsIgnoreCase(inputStr)) {
+                    System.out.print(members[k]+"님 환영합니다");
+                    break;
+                }
+                if (k == members.length - 1) {
+                    System.out.print("회원가입해주세요");
+                }
+            }*/
+
+            // case3
+          /*  int k = 0;
+            for (    ; k < members.length; k++) {
+                if (members[k].equalsIgnoreCase(inputStr)) {
+                    System.out.print(members[k] + "님 환영합니다");
+                    break;
+                }
+            }
+            if (k == members.length) {
+                System.out.print("회원가입해주세요");*/
             }
         }
-    }
-}
+
+
+
+
+
 
