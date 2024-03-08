@@ -1,7 +1,7 @@
 public class Java0305 {
     public static void main(String[] args) {
         // break = 제어문의 중괄호를 탈출시키는 키워드
-        for (int i = 0; i < 10; i++) {
+        /*for (int i = 0; i < 10; i++) {
             System.out.println(i);
             if (i > 5) {
                 break;
@@ -43,7 +43,7 @@ public class Java0305 {
             }
         }
         System.out.println();
-
+*/
         // coutinue 사용법
         for ( int i= 0 ; i < 10 ; i++) {
             if ( i %2 == 1) { // 홀수의 경우 아래 출력문을 실행하지 않음

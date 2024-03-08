@@ -19,3 +19,5 @@ public class Java0307_2 {
         System.out.print(Arrays.toString(lottoList));
     }
 }
+
+

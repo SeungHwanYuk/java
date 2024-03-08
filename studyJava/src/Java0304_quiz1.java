@@ -1,5 +1,16 @@
 public class Java0304_quiz1 {
     public static void main(String[] args) {
+        int a = 5;
+        int b = a++;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(++a);
+        System.out.println(++b);
+        System.out.println(a++ + --b);
+        System.out.println(a + b);
+
+
+
         //다음 for 문과 동일한 기능을 수행하는 while 문을 작성하시오.
         for (int i = 10; i > 0; i -= 2) {
             System.out.print(i + " ");
