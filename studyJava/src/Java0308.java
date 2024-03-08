@@ -10,11 +10,11 @@ public class Java0308 {
             System.out.println("양의 정수 10개를 입력 :");
             System.out.println( i +"개 입력하셨습니다");
             int[] numArr = new int[sc.nextInt()];
+            boolean found = false;
 
         for (int j = 0 ; j < numArr.length;j++){
             if (numArr[j] % 3 == 0) {
-                continue;
-                System.out.println(numArr.toString());
+                found = true;
             }
 
 
