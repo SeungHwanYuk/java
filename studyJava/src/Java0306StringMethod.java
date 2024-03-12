@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Java0306_2 {
+public class Java0306StringMethod {
     public static void main(String[] args) {
         // 문자열 수정
         // @.toLowerCase() = 영문 문자를 모두 소문자로 변환한다.

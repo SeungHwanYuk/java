@@ -1,4 +1,4 @@
-public class Java0305_4 {
+public class Java0305String {
     public static void main(String[] args) {
         // String 클래스의 첫번째 특징
         // 값의 변경이 불가능한 대신 새로운 주소에 새로 쓴다

@@ -1,8 +1,7 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Java0307_2 {
+public class Java0307Lotto {
     public static void main(String[] args) {
         Random rd = new Random();
         int[] lottoList = new int[6];

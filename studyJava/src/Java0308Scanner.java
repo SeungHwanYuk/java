@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Java0308 {
+public class Java0308Scanner {
     public static void main(String[] args) {
         // 양의점수 10개를 입력  Scanner 입력 sc.nextInt for문으로 열번
         // 배열에 담는다

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Java0306_3 {
+public class Java0306Q1_Q5 {
     public static void main(String[] args) {
         // Q1 길이가 10인 배열에 1부터 10까지 입력
         int[] intArray1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};

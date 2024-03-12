@@ -1,4 +1,4 @@
-public class Java0229 {
+public class Java0229ElseIf {
     public static void main(String[] args) {
         boolean x = true;
         // if

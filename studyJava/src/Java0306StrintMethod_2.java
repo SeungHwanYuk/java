@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Java0306_1 {
+public class Java0306StrintMethod_2 {
     public static void main(String[] args) {
         // 문자열의 길이
         // @.length() = 문자열의 길이를 리턴한다. 한글, 영문, 공백 구분없이 한 문자당 1개의 크기를 가짐

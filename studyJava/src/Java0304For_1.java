@@ -1,4 +1,4 @@
-public class Java0304 {
+public class Java0304For_1 {
     public static void main(String[] args) {
 /*        for (초기식; 조건식; 증감식) {
             System.out.println(i);
