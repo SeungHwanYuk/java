@@ -30,7 +30,7 @@ public class Java0229ElseIf {
         // 학점 코드 (범위를 나타내는 조건식)
         // 조건식에 사용된 범위가 전체를 100% 커버해야한다
         // 중복이 해당되도록 조건을 만들면 안됨
-        int score = 91;
+        int score = 61;
         if (score>=90) {
             System.out.println("A학점");
         }else if (score >= 80 && score < 90){
@@ -65,7 +65,7 @@ public class Java0229ElseIf {
             }
         }
         // switch case
-        int score2 = 2;
+        int score2 = 1;
         switch (score2){
             case 1:
                 System.out.println("A");
