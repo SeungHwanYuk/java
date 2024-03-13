@@ -7,6 +7,9 @@ public class Java0312Array2 {
         int visited = -1;
         // 1차 for문
         for (int i = 0; i < arr.length; i++) {
+            if (fr[i] == visited) {
+                continue;
+            }
             int count = 1;
             // 이중 for문 시작
             for (int j = i + 1; j < arr.length; j++) {
