@@ -8,7 +8,7 @@ public class Q2 {
         // 유저의 인풋을 두번 받아 처음에는 변경하고자 하는 방식을 선택하고 (1 또는 2)
         // 두번째에는 변경하고자 하는 온도를 입력받음(double 타입)
         // 첫번째 선택에 따라 출력방식이 달라져야 함
-        // 화씨 -> 섭씨 공식 : 5(temp - 32) / 9
+        // 화씨 -> 섭씨 공식 : (5*(temp - 32)) / 9
         // 섭씨 -> 화씨 공식 : ((9 * temp) / 5) + 32
         /*
             결과 예시
@@ -21,7 +21,15 @@ public class Q2 {
         System.out.println("온도를 입력하시오 : ");
         double temp = sc.nextDouble();
         double result;
-
-
+        if (input == 1) {
+            result = (5 * (temp - 32)) / 9;
+            System.out.println((float) result);
+        }
+        if (input == 2) {
+            result = ((9 * temp) / 5) + 32;
+            System.out.println((float) result);
+        } if (input !=1 && input !=2){
+            System.out.println("잘못 입력하셨습니다.");
+        }
     }
 }
