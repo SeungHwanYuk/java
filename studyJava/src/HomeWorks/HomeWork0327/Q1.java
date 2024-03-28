@@ -13,5 +13,13 @@ public class Q1 {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
 
+        String a = (num >1)? "양수" : (num<0)? "음수" : "0";
+
+        System.out.println(a);
+
+
+
+
+
     }
 }

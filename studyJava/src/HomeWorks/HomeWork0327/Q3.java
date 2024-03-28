@@ -15,15 +15,49 @@ package HomeWorks.HomeWork0327;
     3반 27번 영철 : 평균 86점
 */
 class Student {
+    String name;
+    int ban;
+    int no;
+    int kor;
+    int eng;
+    int math;
 
+    public Student() {
+    }
+
+    public Student(String name, int ban, int no, int kor, int eng, int math) {
+        this.name = name;
+        this.ban = ban;
+        this.no = no;
+        this.kor = kor;
+        this.eng = eng;
+        this.math = math;
+    }
+    public float getAvg() {
+        float a;
+        a = (this.kor + this.eng + this.math);
+        return (a/3);
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "이름 :'" + this.name +
+                ", 반 :" + this.ban +
+                ", 번호 :" + this.no +
+                ", 국어점수 :" + this.kor +
+                ", 영어점수 :" + this.eng +
+                ", 수학점수 :" + this.math;
+    }
 }
 public class Q3 {
     public static void main(String[] args) {
-//        Student a = new Student("동수", 1, 3, 90, 80, 100);
-//        Student b = new Student("창수", 2, 10, 80, 70, 85);
-//        Student c = new Student("영철", 3, 27, 95, 75, 90);
-//        System.out.println(a.toString() + " : 평균 " + a.getAvg() + "점"); //1반 3번 동수 : 평균 90점
-//        System.out.println(b.toString() + " : 평균 " + b.getAvg() + "점"); //2반 10번 창수 : 평균 78점
-//        System.out.println(c.toString() + " : 평균 " + c.getAvg() + "점"); //3반 27번 영철 : 평균 86점
+        Student a = new Student("동수", 1, 3, 90, 80, 100);
+        Student b = new Student("창수", 2, 10, 80, 70, 85);
+        Student c = new Student("영철", 3, 27, 95, 75, 90);
+        System.out.println(a.toString() + " : 평균 " + a.getAvg() + "점"); //1반 3번 동수 : 평균 90점
+        System.out.println(b.toString() + " : 평균 " + b.getAvg() + "점"); //2반 10번 창수 : 평균 78점
+        System.out.println(c.toString() + " : 평균 " + c.getAvg() + "점"); //3반 27번 영철 : 평균 86점
     }
 }
