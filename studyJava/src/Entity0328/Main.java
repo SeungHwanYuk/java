@@ -4,14 +4,27 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static Entity0328.CreateInfo.createInfo;
+
 public class Main {
         // 유저 , 강의 , 수강관리 클래스 생성 > ArrayList 담기
         // 강의 1번 수강생의 loginId찾기
         // 유저의 loginId로 강의명 찾기
+        static ArrayList<User> users;
+        static ArrayList<Lecture> lectures;
+        static ArrayList<LectureRegistration> lectureRegistrations;
+        static ArrayList<Review> reviews;
+
         public static void main(String[] args) {
 
 
-                User tom = new User("T", "Tom", "Male", 20, 3, "Seoul"
+
+
+                System.out.println();
+                CreateInfo.createInfo();
+
+
+                /*User tom = new User("T", "Tom", "Male", 20, 3, "Seoul"
                         , "asd123", "123asd", LocalDate.of(2003, 3, 23));
                 User jessi = new User("J", "Jessi", "Male", 24, 6, "Seoul"
                         , "jess123", "123jess", LocalDate.of(1999, 12, 12));
@@ -30,24 +43,24 @@ public class Main {
                 Lecture doItJava = new Lecture(3, "'Do it! Real Edits for Java Tutorial'"
                         , "Seo HyungWon", "50min", 6, "PC");
                 Lecture figmapigma = new Lecture(4, "'Figma Pigma'", "Cheon An"
-                        , "30min", 1, "PC");
+                        , "30min", 1, "PC");*/
 
 
-                ArrayList<Lecture> lectures = new ArrayList<>();
+            /*    ArrayList<Lecture> lectures = new ArrayList<>();
                 Lecture lecture1 = new Lecture();
 
 
                 ArrayList<LectureRegistration> lectureRegistrations = new ArrayList<>();
-                LectureRegistration lectureRegistration1 = new LectureRegistration(tom.getUserLoginId(), magicOfMath.lectureId, magicOfMath.getLectureName());
+                LectureRegistration lectureRegistration1 = new LectureRegistration(tom.getUserLoginId(), magicOfMath.lectureId);
                 lectureRegistrations.add(lectureRegistration1);
-                LectureRegistration lectureRegistration2 = new LectureRegistration(jessi.getUserLoginId(), howToCount10.lectureId, howToCount10.getLectureName());
+                LectureRegistration lectureRegistration2 = new LectureRegistration(jessi.getUserLoginId(), howToCount10.lectureId);
                 lectureRegistrations.add(lectureRegistration2);
-                LectureRegistration lectureRegistration3 = new LectureRegistration(yami.getUserLoginId(), doItJava.lectureId, doItJava.getLectureName());
+                LectureRegistration lectureRegistration3 = new LectureRegistration(yami.getUserLoginId(), doItJava.lectureId);
                 lectureRegistrations.add(lectureRegistration3);
-                LectureRegistration lectureRegistration4 = new LectureRegistration(steve.getUserLoginId(), magicOfMath.lectureId, magicOfMath.getLectureName());
+                LectureRegistration lectureRegistration4 = new LectureRegistration(steve.getUserLoginId(), magicOfMath.lectureId);
                 lectureRegistrations.add(lectureRegistration4);
-                LectureRegistration lectureRegistration5 = new LectureRegistration(maria.getUserLoginId(), doItJava.lectureId, doItJava.getLectureName());
-                lectureRegistrations.add(lectureRegistration5);
+                LectureRegistration lectureRegistration5 = new LectureRegistration(maria.getUserLoginId(), doItJava.lectureId);
+                lectureRegistrations.add(lectureRegistration5);*/
 
                 System.out.println("1. 'Magic of Math' , Voldmote 교수님");
                 System.out.println("2. 'How To Easier counting to Ten' , Kim SuJwong 교수님");
@@ -94,17 +107,20 @@ public class Main {
                 System.out.print("수강생의 아이디를 입력하세요 : ");
                 String inputString = sc1.nextLine();
 
-                String g;
+                int g;
                 for (int i = 0; i < lectureRegistrations.size(); i++) {
                         if (inputString.equalsIgnoreCase(lectureRegistrations.get(i).userId)) {
-                                g = lectureRegistrations.get(i).userId;
-                             /*   for (int j = 0; j < lectureRegistrations.size(); j++) {
-                                        if (g == lectureRegistrations.get(j).userId) {*/
-                                                System.out.println(lectureRegistrations.get(i).getLecName());
+                                g = lectureRegistrations.get(i).lectureId;
+                                for (int j = 0; j < lectures.size(); j++) {
+                                        if (g == lectures.get(j).lectureId) {
+                                                String title = lectures.get(j).getLectureName();
+                                                System.out.println(title);
                                         }
                                 }
                         }
                 }
+        }
+}
 
 
 

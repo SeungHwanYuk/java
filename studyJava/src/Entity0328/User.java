@@ -4,7 +4,6 @@ import java.time.LocalDate;
 
 public class User {
 
-    String userId;
     private String userName;
     private String userGender;
     private int userAge;
@@ -18,8 +17,7 @@ public class User {
     public User() {
     }
 
-    public User(String userId, String userName, String userGender, int userAge, int userLevel, String userAddress, String userLoginId, String userPassword, LocalDate birthDate) {
-        this.userId = userId;
+    public User(String userName, String userGender, int userAge, int userLevel, String userAddress, String userLoginId, String userPassword, LocalDate birthDate) {
         this.userName = userName;
         this.userGender = userGender;
         this.userAge = userAge;
@@ -29,13 +27,6 @@ public class User {
         this.userPassword = userPassword;
     }
 
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
 
     public String getUserName() {
         return userName;
@@ -104,7 +95,6 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userId='" + userId + '\'' +
                 ", userName='" + userName + '\'' +
                 ", userGender='" + userGender + '\'' +
                 ", userAge=" + userAge +

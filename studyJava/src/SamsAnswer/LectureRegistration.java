@@ -1,28 +1,23 @@
-package Entity0328;
+package SamsAnswer;
 
 public class LectureRegistration {
-    String userId;
+    String loginId;
     int lectureId;
-
 
     public LectureRegistration() {
     }
 
-    public LectureRegistration(String userId, int lectureId) {
-        this.userId = userId;
+    public LectureRegistration(String loginId, int lectureId) {
+        this.loginId = loginId;
         this.lectureId = lectureId;
     }
 
-
-
-
-
-    public String getUserId() {
-        return userId;
+    public String getLoginId() {
+        return loginId;
     }
 
     public void setUserId(String userId) {
-        this.userId = userId;
+        this.loginId = userId;
     }
 
     public int getLectureId() {
