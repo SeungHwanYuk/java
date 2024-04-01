@@ -18,9 +18,6 @@ public class Main {
         public static void main(String[] args) {
 
 
-
-
-                System.out.println();
                 CreateInfo.createInfo();
 
 
@@ -118,6 +115,15 @@ public class Main {
                                         }
                                 }
                         }
+                }
+        }
+
+        public static boolean createReview(int reviewId, int rating, String text, String userLoginId, int lectureId) {
+                /*ArrayList<Review> reviews = new ArrayList<>();*/
+                if (rating >= 11 || rating < 0) {
+                        return false;
+                } else {
+                        return reviews.add(new Review(reviewId, rating, text, userLoginId, lectureId));
                 }
         }
 }

@@ -62,16 +62,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", loginId='" + loginId + '\'' +
-                ", password='" + password + '\'' +
-                ", birthDate=" + birthDate +
-                ", email='" + email + '\'' +
-                '}';
-
-    /*    @Override
-    public String toString() {
-        return name + ", " + loginId + ", " + birthDate.toString();*/
+        return name + ", " + loginId + ", " + birthDate.toString();
     }
 }

@@ -1,20 +1,20 @@
-package Entity0328;
+package SamsExample.EntityEx0328;
 
 public class Review {
-    int reviewId;
-    int rating;
-    String text;
-    String userLoginId;
-    int lectureId;
+    private int reviewId;
+    private int rating;
+    private String text;
+    private String loginId;
+    private int lectureId;
 
     public Review() {
     }
 
-    public Review(int reviewId, int rating, String text, String userLoginId, int lectureId) {
+    public Review(int reviewId, int rating, String text, String loginId, int lectureId) {
         this.reviewId = reviewId;
         this.rating = rating;
         this.text = text;
-        this.userLoginId = userLoginId;
+        this.loginId = loginId;
         this.lectureId = lectureId;
     }
 
@@ -42,12 +42,12 @@ public class Review {
         this.text = text;
     }
 
-    public String getUserLoginId() {
-        return userLoginId;
+    public String getLoginId() {
+        return loginId;
     }
 
-    public void setUserLoginId(String userLoginId) {
-        this.userLoginId = userLoginId;
+    public void setLoginId(String loginId) {
+        this.loginId = loginId;
     }
 
     public int getLectureId() {
@@ -60,12 +60,7 @@ public class Review {
 
     @Override
     public String toString() {
-        return "Review{" +
-                "reviewId=" + reviewId +
-                ", rating=" + rating +
-                ", text='" + text + '\'' +
-                ", userLoginId='" + userLoginId + '\'' +
-                ", lectureId=" + lectureId +
-                '}';
+        return "(" + reviewId + ": " + rating + ": " + text
+                + ": " + loginId + ": " + lectureId + ")";
     }
 }
