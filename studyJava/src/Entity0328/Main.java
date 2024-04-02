@@ -1,8 +1,7 @@
 package Entity0328;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 import static Entity0328.CreateInfo.createInfo;
 
@@ -14,11 +13,26 @@ public class Main {
         static ArrayList<Lecture> lectures;
         static ArrayList<LectureRegistration> lectureRegistrations;
         static ArrayList<Review> reviews;
+        static ArrayList<Teacher> teachers;
+        static ArrayList<LectureTeacher> lectureTeachers;
 
         public static void main(String[] args) {
 
+                System.out.println("1번 강의실 : 'Magic of Math'");
+                System.out.println("2번 강의실 : 'How To Easier counting to Ten'");
+                System.out.println("3번 강의실 : 'Do it! Real Edits for Java Tutorial'");
+                System.out.println("4번 강의실 : 'Figma Pigma'");
+                System.out.println();
+
 
                 CreateInfo.createInfo();
+
+
+                getTeacherByLectureId(3);
+                System.out.println();
+
+                getLectureTitleListByTeacherId("voldmote");
+                System.out.println();
 
 
                 /*User tom = new User("T", "Tom", "Male", 20, 3, "Seoul"
@@ -58,12 +72,6 @@ public class Main {
                 lectureRegistrations.add(lectureRegistration4);
                 LectureRegistration lectureRegistration5 = new LectureRegistration(maria.getUserLoginId(), doItJava.lectureId);
                 lectureRegistrations.add(lectureRegistration5);*/
-
-                System.out.println("1. 'Magic of Math' , Voldmote 교수님");
-                System.out.println("2. 'How To Easier counting to Ten' , Kim SuJwong 교수님");
-                System.out.println("3. 'Do it! Real Edits for Java Tutorial' , Seo HyungWon 교수님");
-                System.out.println("4. 'Figma Pigma' , Cheon An 교수님");
-                System.out.println();
 
 
                 Scanner sc = new Scanner(System.in);
@@ -118,7 +126,40 @@ public class Main {
                 }
         }
 
-        public static boolean createReview(int reviewId, int rating, String text, String userLoginId, int lectureId) {
+    public static void getTeacherByLectureId(int lectureId) {
+            for (int i = 0; i < lectureTeachers.size(); i++) {
+                    if (lectureTeachers.get(i).getLectureId() == lectureId) {
+                            for (int j = 0; j < teachers.size(); j++) {
+                                    if (lectureTeachers.get(i).getTeacherId() == teachers.get(j).teacherId)
+                                            System.out.println(lectureId + "번 강의실은 " + teachers.get(j).teacherName + " 교수님 강의입니다");
+                            }
+                    }
+            }
+    }
+
+    public static void getLectureTitleListByTeacherId(String teacherName) {
+                List<String> lectureList = new ArrayList<>();
+                String teacherId;
+                int lecId;
+                for (int i = 0; i<teachers.size(); i++) {
+                        if (teacherName.equalsIgnoreCase(teachers.get(i).teacherName)) {
+                                teacherId = teachers.get(i).teacherId;
+                                for (int j = 0;j < lectureTeachers.size() ; j++) {
+                                        if (teacherId == lectureTeachers.get(j).teacherId){
+                                                lecId = lectureTeachers.get(j).lectureId;
+                                                for(int k = 0;k<lectures.size();k++){
+                                                        if(lecId == lectures.get(k).lectureId)
+                                                                lectureList.add(lectures.get(k).getLectureName());
+                                                }
+                                        }
+                                }
+                        }
+                }
+            System.out.println(teacherName+" 교수님의 강의목록은 "+ lectureList+" 입니다.");
+    }
+
+
+    public static boolean createReview(int reviewId, int rating, String text, String userLoginId, int lectureId) {
                 /*ArrayList<Review> reviews = new ArrayList<>();*/
                 if (rating >= 11 || rating < 0) {
                         return false;
