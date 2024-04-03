@@ -1,8 +1,15 @@
 package SamsExample.EntityEx0328;
 
 public class LectureRegistration {
+
+
+
     String loginId;
     int lectureId;
+
+
+
+
 
     public LectureRegistration() {
     }

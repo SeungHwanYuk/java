@@ -11,6 +11,8 @@ package Entity0328.ReplyInfo;
 //     : 댓글이 자유게시판의 어느 글의 댓글인지 저장
 //1-3) Reply 객체가 생성될때 1-2의 해당 글의 객체에 있는 replies에 등록이 되어야 한다!!!
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -74,11 +76,10 @@ public class FreeBoard {
     }
 
 
-
     @Override
     public String toString() {
         return "FreeBoard{" +
-                "boardingId=" + freeBoardId +
+                "freeBoardId=" + freeBoardId +
                 ", categoryFreeboard=" + categoryFreeboard +
                 ", content='" + content + '\'' +
                 ", userLoginId='" + userLoginId + '\'' +
