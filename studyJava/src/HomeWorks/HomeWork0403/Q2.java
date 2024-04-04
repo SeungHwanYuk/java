@@ -9,23 +9,41 @@ class MyTv {
     final int MAX_CHANNEL = 100;
     final int MIN_CHANNEL = 1;
     void turnOnOff() {
+        if(!isPowerOn) {
+        isPowerOn = true;
+        } else {
+            isPowerOn = false;
+        }
+
         // isPowerOn의 값이 true면 false로, false면 true로 바꾼다
 
     }
     void volumeUp() {
+        if (volume < MAX_VOLUME)
+            volume = volume + 1;
         // volume의 값이 MAX_VOLUME보다 작을 때만 값을 1 증가시킨다.
 
     }
     void volumeDown() {
+        if (volume > MIN_VOLUME)
+            volume = volume - 1;
         // volume의 값이 MIN_VOLUME보다 클 때만 값을 1 감소시킨다.
 
     }
     void channelUp() {
+        if (channel == MAX_CHANNEL) {
+            channel = MIN_CHANNEL-1;
+        }
+        channel = channel + 1;
         // channel의 값을 1 증가시킨다.
         // channel이 MAX_CHANNEL이면, channel의 값을 MIN_CHANNEL 바꾼다.
 
     }
     void channelDown() {
+        if (channel == MIN_CHANNEL) {
+            channel = MAX_CHANNEL + 1;
+        }
+        channel = channel - 1;
         // channel의 값을 1 감소시킨다.
         // channel이 MIN_CHANNEL이면, channel의 값을 MAX_CHANNEL로 바꾼다.
 
@@ -48,5 +66,8 @@ public class Q2 {
         t.channelDown();
         t.volumeUp();
         System.out.println("CH:"+t.channel+", VOL:"+ t.volume); // CH:9, VOL:51
+
+        t.turnOnOff();
+        System.out.println(t.isPowerOn);
     }
 }
