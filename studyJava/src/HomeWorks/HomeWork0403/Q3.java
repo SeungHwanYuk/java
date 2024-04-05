@@ -1,9 +1,6 @@
 package HomeWorks.HomeWork0403;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Q3 {
     public static void main(String[] args) {
@@ -12,23 +9,60 @@ public class Q3 {
         // 단, 중복 문자열은 저장하지 말아야 함
 
         // 여기 코드 작성 !!
-        String[] strArray = new String[5];
+        ArrayList<String> str = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         String inputStr = sc.nextLine();
-        strArray[0] = inputStr;
-        for (int i = 1; i < strArray.length-1; ) {
-            strArray[i] = inputStr;
-            for (int j = 0 ; ;j++) {
-                if(strArray[i].equalsIgnoreCase(strArray[i+1])) {
-                    strArray[i+1] = new String();
-                    System.out.println("중복된 값을 입력함");
-                    i = i=0;
-                }else {
-                    strArray[j] = inputStr;
-                    i=i+1;
+        str.add(inputStr);
+
+        for (int i = 0; i < 4; ) {
+            inputStr = sc.nextLine();
+            for (int j = 0; true; j++) {
+                if (str.get(j).equals(inputStr)) {
+                    System.out.println("중복");
+                    inputStr = sc.nextLine();
+                }
+                if (!str.get(j).equals(inputStr)){
+                    str.add(inputStr);
+                    i++;
+                    break;
                 }
             }
+            System.out.println(str);
         }
-        System.out.println(Arrays.toString(strArray));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//        for (int i = 0; i < strArray.length; ) {
+//            inputStr = sc.nextLine();
+//            for (int j = 0 ; j < strArray.length ; j++) {
+//                if(!strArray[j].equals(inputStr)) {
+//                    strArray[i] = inputStr;
+//                    i++;
+//                    break;
+//                }else {
+//                    System.out.println("중복된 값을 입력함");
+//                    i=i-1;
+//                    j=6;
+//                }
+//            }
+//        }
+//        System.out.println(Arrays.toString(strArray));
+//    }
+//}

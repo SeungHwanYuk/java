@@ -75,6 +75,8 @@ public class FreeBoard {
         this.replies = replies;
     }
 
+    // (Reply reply) { replies.add(reply);}
+
 
     @Override
     public String toString() {

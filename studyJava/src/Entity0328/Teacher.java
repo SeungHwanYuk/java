@@ -1,6 +1,8 @@
 package Entity0328;
 
 public class Teacher {
+
+    // 필드멤버는 private 을 기본으로 두자
     String teacherId;
     String teacherName;
     String teacherEmail;
