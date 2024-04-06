@@ -11,23 +11,25 @@ public class Q3 {
         // 여기 코드 작성 !!
         ArrayList<String> str = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        String inputStr = sc.nextLine();
-        str.add(inputStr);
+//        String inputStr = sc.nextLine();
+//        str.add(inputStr);
 
-        for (int i = 0; i < 4; ) {
-            inputStr = sc.nextLine();
+        for (int i = 0; i < 5; ) {
+            String inputStr = sc.nextLine();
             for (int j = 0; true; j++) {
                 if (str.get(j).equals(inputStr)) {
+                    j = 0;
                     System.out.println("중복");
                     inputStr = sc.nextLine();
+                } else {
+                    if (!str.get(j).equals(inputStr)) {
+                        str.add(inputStr);
+                        i++;
+                        break;
+                    }
                 }
-                if (!str.get(j).equals(inputStr)){
-                    str.add(inputStr);
-                    i++;
-                    break;
-                }
+                System.out.println(str);
             }
-            System.out.println(str);
         }
     }
 }
