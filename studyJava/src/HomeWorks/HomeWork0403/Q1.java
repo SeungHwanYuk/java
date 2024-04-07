@@ -23,7 +23,7 @@ public class Q1 {
         for (int i = 0; i < str.length(); i++) {
             if (strToChar[i]!=strToCharLower[i]) {
                 result[i] = strToCharLower[i];
-            }else {
+            } else {
                 result[i] = strToCharUpper[i];
             }
         }

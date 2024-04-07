@@ -9,44 +9,48 @@ public class Q3 {
         // 단, 중복 문자열은 저장하지 말아야 함
 
         // 여기 코드 작성 !!
-        ArrayList<String> str = new ArrayList<>();
+        ArrayList<String> tempStrList = new ArrayList<>();
+        ArrayList<String> result = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-//        String inputStr = sc.nextLine();
-//        str.add(inputStr);
-
-        for (int i = 0; i < 5; ) {
+        System.out.println("문자를 입력하세요.");
+        for (int i = 0; result.size() < 5 ; i++) {
             String inputStr = sc.nextLine();
-            for (int j = 0; true; j++) {
-                if (str.get(j).equals(inputStr)) {
-                    j = 0;
-                    System.out.println("중복");
-                    inputStr = sc.nextLine();
-                } else {
-                    if (!str.get(j).equals(inputStr)) {
-                        str.add(inputStr);
-                        i++;
-                        break;
-                    }
+            System.out.println((result.size()+1) + "개 입력하셨습니다. "+ (result.size()+1) + "/5");
+            tempStrList.add(inputStr);
+            for (String str : tempStrList) {
+                if (!result.contains(str)) {
+                    result.add(str);
                 }
-                System.out.println(str);
+                }
             }
+        System.out.println(result);
         }
     }
-}
+    // 주말 사이에 몇 시간동안 짜봤는데 막히는 부분이 너무 많아서 구글에 ArrayList 중복 제거하는 법을
+    // 검색, 참고하여 contain 추가로 겨우 만들었습니다....ㅠㅠ
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+//        for (int i = 0; i < 5; ) {
+//            String inputStr = sc.nextLine();
+//            for (int j = 0; true; j++) {
+//                str.add(inputStr);
+//                if (!str.get(j).equals(inputStr)) {
+//                    str.add(inputStr);
+//                    i++;
+//                    break;
+//                } else {
+//
+////                    if (!str.get(j).equals(inputStr)) {
+//                    System.out.println("중복");
+//                    inputStr = sc.nextLine();
+//                    }
+//                }
+//                System.out.println(str);
+//            }
+//        }
+//    }
 
 
 
