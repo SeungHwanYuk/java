@@ -16,22 +16,22 @@ public class Q1 {
         char[] strToChar = str.toCharArray();
         char[] strToCharLower = str.toLowerCase().toCharArray();
         char[] strToCharUpper = str.toUpperCase().toCharArray();
-        char[] result = new char[strToChar.length];
+        String[] result = new String[strToChar.length];
 //        System.out.println(Arrays.toString(strToChar));
 //        System.out.println(Arrays.toString(strToCharLower));
 //        System.out.println(Arrays.toString(strToCharUpper));
         for (int i = 0; i < str.length(); i++) {
             if (strToChar[i]!=strToCharLower[i]) {
-                result[i] = strToCharLower[i];
+                result[i] = String.valueOf(strToCharLower[i]);
             } else {
-                result[i] = strToCharUpper[i];
+                result[i] = String.valueOf(strToCharUpper[i]);
             }
         }
-        System.out.println(result);
+
 
 //        String[] strings = new String[]{str};
 
         // 여기 코드 작성 !!
-        return "";
+        return Arrays.toString(result);
     }
 }
