@@ -1,4 +1,4 @@
-use testdb;
+
 
 select ceiling(123.16),
 	floor(123.56),

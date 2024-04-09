@@ -1,4 +1,4 @@
-use testdb;
+
 
 
 -- char_length 문자의 갯수
