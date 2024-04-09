@@ -103,6 +103,14 @@ where 도시 in("춘천시","과천시") and 담당자직위 like '%이사'; -- 
 
 
 
+
+
+
+
+
+
+
+
 select * from 고객
 where 도시 not like '%특별시' and 도시 not like '%광역시'
 order by 마일리지 desc
