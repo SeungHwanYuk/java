@@ -16,11 +16,21 @@ select if(12500*450 > 500000,'초과달성', '미달성');
 
 
 -- ifnull (A , B)
--- A가 null이면 B, A가 null이 아니면 A를 반환
+-- A가 null이면 B, A가 null이 아니면 A를 반환 (null이 아니면 그대로 둠)
 select ifnull(5, 'null'),
 	ifnull(null, '값이 없음'),
 	ifnull(1/0, null); 
-	
+
+
+
+-- nullif(A, B) -> (new , old) 로 생각.
+-- A와 B가 동일하면 null을 리턴, 다르면 A를 리턴
+-- 특정 컬럼을 업데이트 했을 경우, 각 데이터별로 업데이트되었는지 여부를 확인하는데 사용.
+-- (기존 값과 동일하면 빈칸, 업데이트되었을 경우에는 업데이트 값이 기록됨)
+select nullif ('mysql', 'oracle'),	
+	nullif ('oracle', 'oracle');
+
+
 
 -- case
 -- 'case when 조건 then 실행'의 형태로 조건에 따른 실행을 여러개 설정가능
