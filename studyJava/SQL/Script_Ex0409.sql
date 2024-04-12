@@ -36,8 +36,10 @@ from 사원;
 
 
 -- 4. 주문테이블에서 요청일보다 발송일이 7일 이상 늦은 주문내역
-select * from 주문
-where 요청일 < 발송일 ;
+select *,
+	datediff(발송일, 요청일) "지연일수"
+from 주문
+where 7 <= datediff(발송일, 요청일) ;
 
 
 -- 5. 고객테이블에서 아래와 같은 컬럼을 만드시오. 단, 도시구분과 마일리지구분 컬럼의 조건
@@ -63,10 +65,10 @@ from 고객;
 select 주문번호, 고객번호, 주문일, 
 year(주문일) "주문년도",
 quarter(주문일)  "주문분기", 
-month(주문일) "주문월", 
+monthname(주문일) "주문월", 
 day(주문일) "주문일수", 
 weekday(주문일) "주문요일",
-case when weekday(주문일) = 0 then '월요일'
+case weekday(주문일) when 0 then '월요일'
 	when 1 then '화요일'
 	when 2 then '수요일'
 	when 3 then '목요일'
