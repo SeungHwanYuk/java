@@ -1,3 +1,5 @@
+package SamsExample;
+
 public class Solution {
     //    public static void main(String[] args) {
 //        System.out.println('\uC120'+""+'\uC0DD'+""+'\uB2D8');
